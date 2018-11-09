@@ -19,9 +19,8 @@ using System.Net;
 using System.Collections;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
-using Microsoft.Xades;
 
-namespace Microsoft.Xades.Test
+namespace Vespertan.Xades.Test
 {
 	/// <summary>
 	/// Summary description for HttpTsaClient.

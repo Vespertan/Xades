@@ -22,7 +22,7 @@ using System.IO;
 using System.Xml;
 using System.Text;
 
-namespace Microsoft.Xades.Test
+namespace Vespertan.Xades.Test
 {
 	/// <summary>
 	/// Summary description for Asn1Parser.

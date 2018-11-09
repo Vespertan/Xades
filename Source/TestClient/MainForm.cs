@@ -25,12 +25,11 @@ using System.Xml.Serialization;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
 using System.Security.Cryptography.X509Certificates;
-using Microsoft.Xades;
 using System.Net;
 using System.Reflection;
 using System.Text;
 
-namespace Microsoft.Xades.Test
+namespace Vespertan.Xades.Test
 {
 	/// <summary>
 	/// Main form of the XAdES demo application
@@ -41,7 +40,7 @@ namespace Microsoft.Xades.Test
         private X509Certificate2 Certificate;
         private X509Chain Chain;
 		private XmlDocument envelopedSignatureXmlDocument;
-		private Microsoft.Xades.XadesSignedXml xadesSignedXml;
+		private Vespertan.Xades.XadesSignedXml xadesSignedXml;
 		private int documentDataObjectCounter;
 
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
@@ -124,7 +123,7 @@ namespace Microsoft.Xades.Test
 		private System.Windows.Forms.GroupBox groupBox15;
 		private System.Windows.Forms.CheckBox includeKeyValueCheckBox;
 		private System.Windows.Forms.TextBox signingTimeTextBox;
-        private Microsoft.Xades.Test.XmlRenderTree verifyXmlRenderTree;
+        private Vespertan.Xades.Test.XmlRenderTree verifyXmlRenderTree;
 		private System.Windows.Forms.TabPage tabPage9;
 		private System.Windows.Forms.GroupBox groupBox4;
 		private System.Windows.Forms.CheckBox includeCertificateChainCheckBox;
@@ -395,7 +394,7 @@ namespace Microsoft.Xades.Test
             this.verify008000CheckBox = new System.Windows.Forms.CheckBox();
             this.verify000002CheckBox = new System.Windows.Forms.CheckBox();
             this.verify000008CheckBox = new System.Windows.Forms.CheckBox();
-            this.verifyXmlRenderTree = new Microsoft.Xades.Test.XmlRenderTree();
+            this.verifyXmlRenderTree = new Vespertan.Xades.Test.XmlRenderTree();
             this.readOnlyNoCheckcheckBox = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();

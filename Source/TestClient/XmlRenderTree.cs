@@ -16,7 +16,7 @@ using System;
 using System.Xml;
 using System.Windows.Forms;
 
-namespace Microsoft.Xades.Test
+namespace Vespertan.Xades.Test
 {
 	/// <summary>
 	/// Control to render XmlNodes

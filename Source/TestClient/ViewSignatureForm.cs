@@ -17,10 +17,9 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-using Microsoft.Xades;
 using System.Xml;
 
-namespace Microsoft.Xades.Test
+namespace Vespertan.Xades.Test
 {
 	/// <summary>
 	/// Summary description for ViewCertificateForm.
@@ -29,7 +28,7 @@ namespace Microsoft.Xades.Test
 	{
 		private XmlElement bufferedXmlElement;
 
-        private Microsoft.Xades.Test.XmlRenderTree signatureXmlRenderTree;
+        private Vespertan.Xades.Test.XmlRenderTree signatureXmlRenderTree;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label signatureStandardLabel;
 		private System.Windows.Forms.Button saveSignatureButton;
@@ -70,7 +69,7 @@ namespace Microsoft.Xades.Test
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.signatureXmlRenderTree = new Microsoft.Xades.Test.XmlRenderTree();
+            this.signatureXmlRenderTree = new Vespertan.Xades.Test.XmlRenderTree();
             this.label2 = new System.Windows.Forms.Label();
             this.signatureStandardLabel = new System.Windows.Forms.Label();
             this.saveSignatureButton = new System.Windows.Forms.Button();

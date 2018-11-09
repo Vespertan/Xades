@@ -152,9 +152,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Library\Library.csproj">
+    <ProjectReference Include="..\Vespertan.Xades\Vespertan.Xades.csproj">
       <Project>{EE1DC57A-344A-4B0A-82CE-5FD328C14894}</Project>
-      <Name>Library</Name>
+      <Name>Vespertan.Xades</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
