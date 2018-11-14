@@ -1409,11 +1409,6 @@
             Serial number of the X509 certificate
             </summary>
         </member>
-        <member name="M:Vespertan.Xades.IssuerSerial.#ctor">
-            <summary>
-            Default constructor
-            </summary>
-        </member>
         <member name="M:Vespertan.Xades.IssuerSerial.HasChanged">
             <summary>
             Check to see if something has changed in this instance and needs to be serialized
@@ -1431,6 +1426,21 @@
             Returns the XML representation of the this object
             </summary>
             <returns>XML element containing the state of this object</returns>
+        </member>
+        <member name="T:Vespertan.Xades.KnownSignatureStandard">
+            <summary>
+            Types of signature standards that can be contained in XadesSignedXml class instance
+            </summary>
+        </member>
+        <member name="F:Vespertan.Xades.KnownSignatureStandard.XmlDsig">
+            <summary>
+            XML Digital Signature (XMLDSIG)
+            </summary>
+        </member>
+        <member name="F:Vespertan.Xades.KnownSignatureStandard.Xades">
+            <summary>
+            XML Advanced Electronic Signature (XAdES) 
+            </summary>
         </member>
         <member name="T:Vespertan.Xades.NoticeNumberCollection">
             <summary>
@@ -3259,63 +3269,6 @@
             </summary>
             <returns>XML element containing the state of this object</returns>
         </member>
-        <member name="T:Vespertan.Xades.XadesObject">
-            <summary>
-            This class represents the unique object of a XAdES signature that
-            contains all XAdES information
-            </summary>
-        </member>
-        <member name="P:Vespertan.Xades.XadesObject.Id">
-            <summary>
-            Id attribute of the XAdES object
-            </summary>
-        </member>
-        <member name="P:Vespertan.Xades.XadesObject.QualifyingProperties">
-            <summary>
-            The QualifyingProperties element acts as a container element for
-            all the qualifying information that should be added to an XML
-            signature.
-            </summary>
-        </member>
-        <member name="M:Vespertan.Xades.XadesObject.#ctor">
-            <summary>
-            Default constructor
-            </summary>
-        </member>
-        <member name="M:Vespertan.Xades.XadesObject.HasChanged">
-            <summary>
-            Check to see if something has changed in this instance and needs to be serialized
-            </summary>
-            <returns>Flag indicating if a member needs serialization</returns>
-        </member>
-        <member name="M:Vespertan.Xades.XadesObject.LoadXml(System.Xml.XmlElement,System.Xml.XmlElement)">
-            <summary>
-            Load state from an XML element
-            </summary>
-            <param name="xmlElement">XML element containing new state</param>
-            <param name="counterSignedXmlElement">Element containing parent signature (needed if there are counter signatures)</param>
-        </member>
-        <member name="M:Vespertan.Xades.XadesObject.GetXml">
-            <summary>
-            Returns the XML representation of the this object
-            </summary>
-            <returns>XML element containing the state of this object</returns>
-        </member>
-        <member name="T:Vespertan.Xades.KnownSignatureStandard">
-            <summary>
-            Types of signature standards that can be contained in XadesSignedXml class instance
-            </summary>
-        </member>
-        <member name="F:Vespertan.Xades.KnownSignatureStandard.XmlDsig">
-            <summary>
-            XML Digital Signature (XMLDSIG)
-            </summary>
-        </member>
-        <member name="F:Vespertan.Xades.KnownSignatureStandard.Xades">
-            <summary>
-            XML Advanced Electronic Signature (XAdES) 
-            </summary>
-        </member>
         <member name="T:Vespertan.Xades.XadesCheckSignatureMasks">
             <summary>
             Bitmasks to indicate which checks need to be executed on the XAdES signature
@@ -3420,6 +3373,48 @@
             <summary>
             Do all known tests on XAdES signature
             </summary>
+        </member>
+        <member name="T:Vespertan.Xades.XadesObject">
+            <summary>
+            This class represents the unique object of a XAdES signature that
+            contains all XAdES information
+            </summary>
+        </member>
+        <member name="P:Vespertan.Xades.XadesObject.Id">
+            <summary>
+            Id attribute of the XAdES object
+            </summary>
+        </member>
+        <member name="P:Vespertan.Xades.XadesObject.QualifyingProperties">
+            <summary>
+            The QualifyingProperties element acts as a container element for
+            all the qualifying information that should be added to an XML
+            signature.
+            </summary>
+        </member>
+        <member name="M:Vespertan.Xades.XadesObject.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Vespertan.Xades.XadesObject.HasChanged">
+            <summary>
+            Check to see if something has changed in this instance and needs to be serialized
+            </summary>
+            <returns>Flag indicating if a member needs serialization</returns>
+        </member>
+        <member name="M:Vespertan.Xades.XadesObject.LoadXml(System.Xml.XmlElement,System.Xml.XmlElement)">
+            <summary>
+            Load state from an XML element
+            </summary>
+            <param name="xmlElement">XML element containing new state</param>
+            <param name="counterSignedXmlElement">Element containing parent signature (needed if there are counter signatures)</param>
+        </member>
+        <member name="M:Vespertan.Xades.XadesObject.GetXml">
+            <summary>
+            Returns the XML representation of the this object
+            </summary>
+            <returns>XML element containing the state of this object</returns>
         </member>
         <member name="T:Vespertan.Xades.XadesSignedXml">
             <summary>

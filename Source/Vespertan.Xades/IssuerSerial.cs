@@ -25,51 +25,17 @@ namespace Vespertan.Xades
 	/// </summary>
 	public class IssuerSerial
 	{
-		#region Private variables
-		private string x509IssuerName;
-		private string x509SerialNumber;
-		#endregion
+        #region Public properties
+        /// <summary>
+        /// Name of the X509 certificate issuer
+        /// </summary>
+        public string X509IssuerName { get; set; }
 
-		#region Public properties
-		/// <summary>
-		/// Name of the X509 certificate issuer
-		/// </summary>
-		public string X509IssuerName
-		{
-			get
-			{
-				return this.x509IssuerName;
-			}
-			set
-			{
-				this.x509IssuerName = value;
-			}
-		}
-
-		/// <summary>
-		/// Serial number of the X509 certificate
-		/// </summary>
-		public string X509SerialNumber
-		{
-			get
-			{
-				return this.x509SerialNumber;
-			}
-			set
-			{
-				this.x509SerialNumber = value;
-			}
-		}
-		#endregion
-
-		#region Constructors
-		/// <summary>
-		/// Default constructor
-		/// </summary>
-		public IssuerSerial()
-		{
-		}
-		#endregion
+        /// <summary>
+        /// Serial number of the X509 certificate
+        /// </summary>
+        public string X509SerialNumber { get; set; }
+        #endregion
 
 		#region Public methods
 		/// <summary>
@@ -80,12 +46,12 @@ namespace Vespertan.Xades
 		{
 			bool retVal = false;
 
-			if (!String.IsNullOrEmpty(this.x509IssuerName))
+			if (!String.IsNullOrEmpty(this.X509IssuerName))
 			{
 				retVal = true;
 			}
 
-			if (!String.IsNullOrEmpty(this.x509SerialNumber))
+			if (!String.IsNullOrEmpty(this.X509SerialNumber))
 			{
 				retVal = true;
 			}
@@ -115,14 +81,14 @@ namespace Vespertan.Xades
 			{
 				throw new CryptographicException("X509IssuerName missing");
 			}
-			this.x509IssuerName = xmlNodeList.Item(0).InnerText;
+			this.X509IssuerName = xmlNodeList.Item(0).InnerText;
 
 			xmlNodeList = xmlElement.SelectNodes("ds:X509SerialNumber", xmlNamespaceManager);
 			if (xmlNodeList.Count == 0)
 			{
 				throw new CryptographicException("X509SerialNumber missing");
 			}
-			this.x509SerialNumber = xmlNodeList.Item(0).InnerText;
+			this.X509SerialNumber = xmlNodeList.Item(0).InnerText;
 		}
 
 		/// <summary>
@@ -139,11 +105,11 @@ namespace Vespertan.Xades
             retVal = creationXmlDocument.CreateElement("xades", "IssuerSerial", XadesSignedXml.XadesNamespaceUri);
 
             bufferXmlElement = creationXmlDocument.CreateElement("ds", "X509IssuerName", SignedXml.XmlDsigNamespaceUrl);
-			bufferXmlElement.InnerText = this.x509IssuerName;
+			bufferXmlElement.InnerText = this.X509IssuerName;
 			retVal.AppendChild(bufferXmlElement);
 
             bufferXmlElement = creationXmlDocument.CreateElement("ds", "X509SerialNumber", SignedXml.XmlDsigNamespaceUrl);
-			bufferXmlElement.InnerText = this.x509SerialNumber;
+			bufferXmlElement.InnerText = this.X509SerialNumber;
 			retVal.AppendChild(bufferXmlElement);
 
 			return retVal;

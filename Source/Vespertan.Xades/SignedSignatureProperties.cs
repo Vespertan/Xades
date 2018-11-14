@@ -270,7 +270,7 @@ namespace Vespertan.Xades
 			}
 			else
 			{
-				throw new CryptographicException("SignaturePolicyIdentifier element missing in SignedSignatureProperties");
+				//throw new CryptographicException("SignaturePolicyIdentifier element missing in SignedSignatureProperties");
 			}
 
 			if (this.signatureProductionPlace != null && this.signatureProductionPlace.HasChanged())
